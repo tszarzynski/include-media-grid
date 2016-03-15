@@ -1,7 +1,9 @@
 @charset 'UTF-8';
 
+// Gutter size
 $im-grid-gutter-size: 0 !default;
 
+// Grid
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -10,12 +12,13 @@ $im-grid-gutter-size: 0 !default;
     padding: 0;
 }
 
+// Grid cell
 .grid-cell {
     flex: 1;
 }
 
-.grid--flex-cells > .grid-cell {
-    display: flex;
+.grid-cell--auto-size {
+    flex: none;
 }
 
 /* Gutters */
@@ -38,15 +41,14 @@ $im-grid-gutter-size: 0 !default;
     align-items: center;
 }
 
-.grid-cell--auto-size {
-    flex: none;
+.grid--flex-cells > .grid-cell {
+    display: flex;
 }
 
 /* Justify */
-.gid--justify-center {
+.grid--justify-center {
     justify-content: center;
 }
-
 /* Alignment per cell */
 .grid-cell--top {
     align-self: flex-start;
