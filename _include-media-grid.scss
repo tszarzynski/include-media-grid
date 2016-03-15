@@ -1,0 +1,104 @@
+@charset 'UTF-8';
+
+$im-grid-gutter-size: 0 !default;
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-cell {
+    flex: 1;
+}
+
+.grid--flex-cells > .grid-cell {
+    display: flex;
+}
+
+/* Gutters */
+.grid--gutters {
+    margin: (-$im-grid-gutter-size) 0 ($im-grid-gutter-size) (-$im-grid-gutter-size);
+}
+.grid--gutters > .grid-cell {
+    padding: $im-grid-gutter-size 0 0 $im-grid-gutter-size;
+    box-sizing: border-box;
+}
+
+/* Alignment per row */
+.grid--top {
+    align-items: flex-start;
+}
+.grid--bottom {
+    align-items: flex-end;
+}
+.grid--center {
+    align-items: center;
+}
+
+.grid-cell--auto-size {
+    flex: none;
+}
+
+/* Justify */
+.gid--justify-center {
+    justify-content: center;
+}
+
+/* Alignment per cell */
+.grid-cell--top {
+    align-self: flex-start;
+}
+.grid-cell--bottom {
+    align-self: flex-end;
+}
+.grid-cell--center {
+    align-self: center;
+}
+
+
+@mixin im-grid-columns($columns...) {
+    @each $i in $columns {
+        @for $n from 1 through $i {
+            .grid--fit > .grid-cell {
+                flex: 1;
+            }
+            .grid--full > .grid-cell {
+                flex: 0 0 100%;
+            }
+            .grid--#{$n}-#{$i} > .grid-cell {
+                flex: 0 0 (($n / $i) * 100%);
+            }
+
+            .grid > .grid-cell--#{$n}-#{$i} {
+                flex: 0 0 (($n / $i) * 100%) !important;
+            }
+        }
+    }
+
+    @each $breakpoint in $breakpoints {
+        $breakpoint-name: nth($breakpoint, 1);
+
+        @include media(#{'>=' + $breakpoint-name}) {
+            @each $i in $columns {
+                @for $n from 1 through $i {
+                    .grid--fit\@#{$breakpoint-name} > .grid-cell {
+                        flex: 1;
+                    }
+                    .grid--full\@#{$breakpoint-name} > .grid-cell {
+                        flex: 0 0 100%;
+                    }
+                    .grid--#{$n}-#{$i}\@#{$breakpoint-name} > .grid-cell {
+                        flex: 0 0 (($n / $i) * 100%);
+                    }
+
+                    .grid > .grid-cell--#{$n}-#{$i}\@#{$breakpoint-name} {
+                        flex: 0 0 (($n / $i) * 100%) !important;
+                    }
+                }
+            }
+        }
+    }
+}

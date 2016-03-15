@@ -1,0 +1,21 @@
+{
+  "title": "include-media-grid",
+  "name": "include-media-grid",
+  "version": "0.1.0",
+  "description": "An include-media plugin for generating grid classes based on the flex display property",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tszarzynski/include-media-grid.git"
+  },
+  "main": "_include-media-grid.scss",
+  "author": {
+    "name": "Tomasz Szarzynski",
+    "email": "hello@tmasz.com"
+  },
+  "bugs": {
+    "url": "https://github.com/tszarzynski/include-media-grid/issues"
+  },
+  "homepage": "https://github.com/tszarzynski/include-media-grid",
+  "license": "MIT",
+  "devDependencies": {}
+}
