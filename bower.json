@@ -1,6 +1,6 @@
 {
   "name": "include-media-grid",
-    "version": "0.1.0",
+    "version": "0.1.1",
   "description": "An include-media plugin for generating grid classes based on the flex display property",
   "main": "_include-media-grid.scss",
   "authors": [
