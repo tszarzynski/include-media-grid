@@ -22,6 +22,7 @@ This plugin generates classes for a grid system based on a number of subdivision
 
 ## Installation
 - **Manually:** Download [this file](https://raw.githubusercontent.com/tszarzynski/include-media-grid/master/_include-media-grid.scss) and import it into your Sass project
+- **npm:** Run `npm install include-media-grid`
 - **Bower:** Run `bower install include-media-grid`
 
 ##Inspiration
