@@ -14,5 +14,5 @@ An include-media plugin for generating grid classes based on the flex display pr
 - **Bower:** Run `bower install include-media-grid`
 
 ## Author
-
 [Tomasz Szarzynski](http://tmasz.com)
+
