@@ -7,14 +7,46 @@ This plugin generates classes for a grid system based on a number of subdivision
 *Example:*
 
 ```scss
+$breakpoints: (phone: 480px, tablet: 768px, desktop: 1024px);
 @import 'include-media';
 @import 'include-media-grid';
 
+// Setting gutters
+$im-grid-gutter-size: 20px;
+// Optionally include max-width to fix IE issues
+$im-grid-include-max-width: false !default;
 // Generating grid classes
-@include im-grid-columns(1, 2);
+@include im-grid-columns(1, 2, 4);
 ```
 
+*Usage:*
 
+```html
+<!-- Simple grid. 1 column on mobile phones. 2 columns on tablets. 4 on desktop devices -->
+<div class="grid grid--1-1@phone grid--1-2@tablet grid--1-4@desktop">
+  <div class="grid-cell"></div>
+  <div class="grid-cell"></div>
+  <div class="grid-cell"></div>
+  <div class="grid-cell"></div>
+</div>
+
+<!-- With gutters -->
+<div class="grid grid--gutters grid--1-1@phone grid--1-2@tablet grid--1-4@desktop">
+  <div class="grid-cell"></div>
+  <div class="grid-cell"></div>
+  <div class="grid-cell"></div>
+  <div class="grid-cell"></div>
+</div>
+
+<!-- Force cell to be always full width single column -->
+<div class="grid grid--gutters grid--full grid--1-2@tablet" >
+  <div class="grid-cell">Full on phone. Half on tablet.</div>
+  <div class="grid-cell">Full on phone. Half on tablet.</div>
+  <div class="grid-cell">Full on phone. Half on tablet.</div>
+  <div class="grid-cell">Full on phone. Half on tablet.</div>
+  <div class="grid-cell grid-cell--1-1">Always single column!!!</div>
+</div>
+```
 
 ## Requirements
 * Sass >= 3.4.x
