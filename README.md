@@ -38,7 +38,7 @@ $im-grid-include-max-width: false !default;
   <div class="grid-cell"></div>
 </div>
 
-<!-- Force cell to be always full width single column -->
+<!-- Force cell to be always a full width single column -->
 <div class="grid grid--gutters grid--full grid--1-2@tablet" >
   <div class="grid-cell">Full on phone. Half on tablet.</div>
   <div class="grid-cell">Full on phone. Half on tablet.</div>
@@ -47,6 +47,8 @@ $im-grid-include-max-width: false !default;
   <div class="grid-cell grid-cell--1-1">Always single column!!!</div>
 </div>
 ```
+
+More examples coming soon. See source files for more options.
 
 ## Requirements
 * Sass >= 3.4.x
