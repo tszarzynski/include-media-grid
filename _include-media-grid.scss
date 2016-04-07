@@ -3,6 +3,9 @@
 // Gutter size
 $im-grid-gutter-size: 0 !default;
 
+// Gutter size
+$im-grid-include-max-width: false !default;
+
 // Grid
 .grid {
     display: flex;
@@ -72,10 +75,14 @@ $im-grid-gutter-size: 0 !default;
             }
             .grid--#{$n}-#{$i} > .grid-cell {
                 flex: 0 0 (($n / $i) * 100%);
+                @if $im-grid-include-max-width
+                    { max-width: (($n / $i) * 100%); }
             }
 
             .grid > .grid-cell--#{$n}-#{$i} {
                 flex: 0 0 (($n / $i) * 100%) !important;
+                @if $im-grid-include-max-width
+                    { max-width: (($n / $i) * 100%) !important; }
             }
         }
     }
@@ -94,10 +101,14 @@ $im-grid-gutter-size: 0 !default;
                     }
                     .grid--#{$n}-#{$i}\@#{$breakpoint-name} > .grid-cell {
                         flex: 0 0 (($n / $i) * 100%);
+                        @if $im-grid-include-max-width
+                            { max-width: (($n / $i) * 100%); }
                     }
 
                     .grid > .grid-cell--#{$n}-#{$i}\@#{$breakpoint-name} {
                         flex: 0 0 (($n / $i) * 100%) !important;
+                        @if $im-grid-include-max-width
+                            { max-width: (($n / $i) * 100%) !important; }
                     }
                 }
             }
