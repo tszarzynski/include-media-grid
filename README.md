@@ -73,6 +73,14 @@ Responsive Grids work by adding media classes to the Grid cells or containers. W
   <div class="grid-cell"></div>
 </div>
 
+<!-- Full-width up to desktop breakpoint -->
+<div class="grid grid--full grid--1-4@desktop">
+  <div class="grid-cell"></div>
+  <div class="grid-cell"></div>
+  <div class="grid-cell grid-cell--1-1@dekstop"></div>
+  <div class="grid-cell grid-cell--1-1">Always single column!!!</div>
+</div>
+
 <!-- Individual sizing -->
 <div class="grid grid--1-1@phone grid--1-2@tablet grid--1-4@desktop">
   <div class="grid-cell"></div>
