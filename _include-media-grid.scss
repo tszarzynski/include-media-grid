@@ -1,12 +1,18 @@
 @charset 'UTF-8';
 
-// Gutter size
+/*
+    Gutter size
+ */
 $im-grid-gutter-size: 0 !default;
 
-// Optionally include max-width to fix IE issues
+/*
+    Optionally include max-width to fix IE issues
+ */
 $im-grid-include-max-width: false !default;
 
-// Grid
+/*
+    Grid
+ */
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -15,7 +21,9 @@ $im-grid-include-max-width: false !default;
     padding: 0;
 }
 
-// Grid cell
+/*
+    Grid cell
+ */
 .grid-cell {
     flex: 1;
 }
@@ -24,7 +32,9 @@ $im-grid-include-max-width: false !default;
     flex: none;
 }
 
-/* Gutters */
+/*
+    Gutters
+*/
 .grid--gutters {
     margin: (-$im-grid-gutter-size) 0 ($im-grid-gutter-size) (-$im-grid-gutter-size);
 }
@@ -33,7 +43,9 @@ $im-grid-include-max-width: false !default;
     box-sizing: border-box;
 }
 
-/* Alignment per row */
+/*
+    Alignment per row
+*/
 .grid--top {
     align-items: flex-start;
 }
@@ -44,15 +56,23 @@ $im-grid-include-max-width: false !default;
     align-items: center;
 }
 
+/*
+    Flexible cells
+ */
 .grid--flex-cells > .grid-cell {
     display: flex;
 }
 
-/* Justify */
+/*
+    Justify
+    */
 .grid--justify-center {
     justify-content: center;
 }
-/* Alignment per cell */
+
+/*
+    Alignment per cell
+*/
 .grid-cell--top {
     align-self: flex-start;
 }
@@ -63,7 +83,9 @@ $im-grid-include-max-width: false !default;
     align-self: center;
 }
 
-
+/*
+    Generate grid classes
+ */
 @mixin im-grid-columns($columns...) {
     @each $i in $columns {
         @for $n from 1 through $i {
