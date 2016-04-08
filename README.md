@@ -122,6 +122,8 @@ Responsive Grids work by adding media classes to the Grid cells or containers. W
 
 More examples coming soon. See source files for more options.
 
+> It's recommended to use this plugin along with **autoprefixer** to maintain cross-browser [support] (http://caniuse.com/#feat=flexbox).
+
 ## Requirements
 * Sass >= 3.4.x
 * [include-media](https://github.com/eduardoboucas/include-media)
