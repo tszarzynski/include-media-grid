@@ -36,7 +36,7 @@ $im-grid-include-max-width: false !default;
     Gutters
 */
 .grid--gutters {
-    margin: (-$im-grid-gutter-size) 0 ($im-grid-gutter-size) (-$im-grid-gutter-size);
+    margin: (-$im-grid-gutter-size) 0 0 (-$im-grid-gutter-size);
 }
 .grid--gutters > .grid-cell {
     padding: $im-grid-gutter-size 0 0 $im-grid-gutter-size;
