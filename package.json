@@ -1,7 +1,7 @@
 {
   "title": "include-media-grid",
   "name": "include-media-grid",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "An include-media plugin for generating grid classes based on the flex display property",
   "repository": {
     "type": "git",
