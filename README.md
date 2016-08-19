@@ -49,6 +49,17 @@ The grid cells below do not specify any widths, they just naturally space themse
 </div>
 ```
 
+####Weight
+Simply make some cells larger or smaller by using grid-cell--light and grid-cell--heavy.
+
+```html
+<!-- With gutters -->
+<div class="grid grid--gutters">
+  <div class="grid-cell grid-cell--light"></div>
+  <div class="grid-cell"></div>
+</div>
+```
+
 ####Individual Sizing
 When equal widths aren’t what you want, you can add sizing classes to individual cells. Cells without sizing classes simply divide up the remaining space as normal.
 
@@ -86,6 +97,31 @@ Responsive Grids work by adding media classes to the Grid cells or containers. W
   <div class="grid-cell"></div>
   <div class="grid-cell"></div>
   <div class="grid-cell grid-cell--1-1">Always single column!!!</div>
+</div>
+```
+
+####Auto grids
+You can avoid adding grid-cell to children by using the grid--auto class. All children div will be considered as a grid-cell.
+
+```html
+<!-- No need for grid-cell  -->
+<div class="grid grid--auto">
+  <div>same row</div>
+  <div>same row</div>
+  <div>same row</div>
+  <div>same row</div>
+</div>
+```
+
+If you need your grid items to fit a specific number of columns, you can use grid--auto-{i}. Any column set generated with im-grid-columns is usable. Responsive grids are also usable.
+
+```html
+<!-- No need for grid-cell, two columns per row  -->
+<div class="grid grid--gutters grid--auto grid--auto-2@tablet grid--auto-4@desktop">
+  <div>first row on desktop, first row on tablet</div>
+  <div>first row on desktop, first row on tablet</div>
+  <div>first row on desktop, second row on tablet</div>
+  <div>first row on desktop, second row on tablet</div>
 </div>
 ```
 
