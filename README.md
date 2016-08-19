@@ -2,7 +2,7 @@
 An include-media plugin for generating grid classes based on the flex display property
 
 ## Introduction
-This plugin generates classes for a grid system based on a number of subdivisions specified by the user, and taking into account all the breakpoints defined by include-media.
+This plugin generates classes for a grid system based on a number of subdivisions specified by the user, and taking into account all the breakpoints defined by [include-media](https://github.com/eduardoboucas/include-media).
 
 ```scss
 
