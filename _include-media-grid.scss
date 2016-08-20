@@ -24,11 +24,15 @@ $im-grid-include-max-width: false !default;
 /*
     Grid cell
 */
-.grid-cell, .grid--auto > div {
+.grid-cell,
+.grid--auto > * {
     flex: 1;
     flex-grow: 4;
 }
 
+/*
+    Grid cell modifiers
+ */
 .grid-cell--auto-size {
     flex: none;
 }
@@ -42,12 +46,13 @@ $im-grid-include-max-width: false !default;
 }
 
 /*
-    Gutters
+    Grid gutters
 */
 .grid--gutters {
     margin: (-$im-grid-gutter-size) 0 0 (-$im-grid-gutter-size);
 }
-.grid--gutters > .grid-cell, .grid--auto.grid--gutters > div {
+.grid--gutters > .grid-cell,
+.grid--auto.grid--gutters > * {
     padding: $im-grid-gutter-size 0 0 $im-grid-gutter-size;
     box-sizing: border-box;
 }
@@ -117,7 +122,7 @@ $im-grid-include-max-width: false !default;
             }
         }
 
-        .grid--auto-#{$i} > div {
+        .grid--auto-#{$i} > * {
             flex: 0 0 ((1 / $i) * 100%) !important;
             @if $im-grid-include-max-width
             { max-width: ((1 / $i) * 100%) !important; }
@@ -148,8 +153,8 @@ $im-grid-include-max-width: false !default;
                         { max-width: (($n / $i) * 100%) !important; }
                     }
                 }
-                
-                .grid--auto-#{$i}\@#{$breakpoint-name} > div {
+
+                .grid--auto-#{$i}\@#{$breakpoint-name} > * {
                     flex: 0 0 ((1 / $i) * 100%) !important;
                     @if $im-grid-include-max-width
                     { max-width: ((1 / $i) * 100%) !important; }
