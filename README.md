@@ -121,7 +121,7 @@ You can avoid adding `grid-cell` to children of the grid by using the `grid--aut
 </div>
 ```
 
-If you need your grid items to fit a specific number of columns, you can use `grid--auto-{i}`. Any column set generated with im-grid-columns is usable. Responsive grids are also usable.
+If you need your grid items to fit a specific number of columns, you can use `grid--auto-{columnNumber}`. Any column set generated with im-grid-columns is usable. Responsive grids are also usable.
 
 ```html
 <!-- No need for grid-cell, two columns per row  -->
