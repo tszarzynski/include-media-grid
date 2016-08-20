@@ -49,17 +49,6 @@ The grid cells below do not specify any widths, they just naturally space themse
 </div>
 ```
 
-####Weight
-Simply make some cells larger or smaller by using grid-cell--light and grid-cell--heavy.
-
-```html
-<!-- With gutters -->
-<div class="grid grid--gutters">
-  <div class="grid-cell grid-cell--light"></div>
-  <div class="grid-cell"></div>
-</div>
-```
-
 ####Individual Sizing
 When equal widths aren’t what you want, you can add sizing classes to individual cells. Cells without sizing classes simply divide up the remaining space as normal.
 
@@ -69,6 +58,25 @@ When equal widths aren’t what you want, you can add sizing classes to individu
   <div class="grid-cell">auto - 1/2</div>
   <div class="grid-cell">auto - 1/2.</div>
   <div class="grid-cell grid-cell--1-1">Always single column!!!</div>
+</div>
+```
+
+####Weight
+You can change the way the cells size themselves, by modifying `flex-grow` property.
+
+```html
+<!-- With gutters -->
+<div class="grid grid--gutters">
+  <div class="grid-cell grid-cell--light">Half the weight of default column.</div>
+  <div class="grid-cell"></div>
+</div>
+```
+
+```html
+<!-- With gutters -->
+<div class="grid grid--gutters">
+  <div class="grid-cell grid-cell--heavy">Twice the weight of default column.</div>
+  <div class="grid-cell"></div>
 </div>
 ```
 
@@ -101,7 +109,7 @@ Responsive Grids work by adding media classes to the Grid cells or containers. W
 ```
 
 ####Auto grids
-You can avoid adding grid-cell to children by using the grid--auto class. All children div will be considered as a grid-cell.
+You can avoid adding `grid-cell` to children of the grid by using the `grid--auto` class. All children elements will be treated as a `grid-cell`.
 
 ```html
 <!-- No need for grid-cell  -->
@@ -113,7 +121,7 @@ You can avoid adding grid-cell to children by using the grid--auto class. All ch
 </div>
 ```
 
-If you need your grid items to fit a specific number of columns, you can use grid--auto-{i}. Any column set generated with im-grid-columns is usable. Responsive grids are also usable.
+If you need your grid items to fit a specific number of columns, you can use `grid--auto-{i}`. Any column set generated with im-grid-columns is usable. Responsive grids are also usable.
 
 ```html
 <!-- No need for grid-cell, two columns per row  -->
