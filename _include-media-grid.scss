@@ -109,13 +109,13 @@ $im-grid-include-max-width: false !default;
             .grid--full > .grid-cell {
                 flex: 0 0 100%;
             }
-            .grid--#{$n}-#{$i} > .grid-cell {
+            .grid--#{$n}-#{$i} > .grid-cell:not([class*='grid-cell--']) {
                 flex: 0 0 (($n / $i) * 100%);
                 @if $im-grid-include-max-width
                 { max-width: (($n / $i) * 100%); }
             }
 
-            .grid > .grid-cell--#{$n}-#{$i} {
+            .grid > .grid-cell.grid-cell--#{$n}-#{$i} {
                 flex: 0 0 (($n / $i) * 100%) !important;
                 @if $im-grid-include-max-width
                 { max-width: (($n / $i) * 100%) !important; }
@@ -141,13 +141,13 @@ $im-grid-include-max-width: false !default;
                     .grid--full\@#{$breakpoint-name} > .grid-cell {
                         flex: 0 0 100%;
                     }
-                    .grid--#{$n}-#{$i}\@#{$breakpoint-name} > .grid-cell {
+                    .grid--#{$n}-#{$i}\@#{$breakpoint-name} > .grid-cell:not([class*='grid-cell--']) {
                         flex: 0 0 (($n / $i) * 100%);
                         @if $im-grid-include-max-width
                         { max-width: (($n / $i) * 100%); }
                     }
 
-                    .grid > .grid-cell--#{$n}-#{$i}\@#{$breakpoint-name} {
+                    .grid > .grid-cell.grid-cell--#{$n}-#{$i}\@#{$breakpoint-name} {
                         flex: 0 0 (($n / $i) * 100%) !important;
                         @if $im-grid-include-max-width
                         { max-width: (($n / $i) * 100%) !important; }
