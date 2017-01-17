@@ -11,6 +11,10 @@ This plugin generates classes for a grid system based on a number of subdivision
 
 $breakpoints: (phone: 480px, tablet: 768px, desktop: 1024px);
 
+// Grid class name
+$im-grid-class: 'grid';
+// Cell class name
+$im-grid-cell-class: 'grid-cell';
 // Setting gutters
 $im-grid-gutter-size: 20px;
 // Optionally include max-width to fix IE issues
