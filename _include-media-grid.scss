@@ -46,6 +46,11 @@ $im-grid-include-max-width: false !default;
 .#{$im-grid-class}--auto > * {
     flex: 1;
     flex-grow: 4;
+
+    @if $im-gutters-default {
+      box-sizing: border-box;
+      padding: $im-grid-gutter-size 0 0 $im-grid-gutter-size;
+    }
 }
 
 /*
