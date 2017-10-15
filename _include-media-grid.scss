@@ -11,6 +11,11 @@ $im-grid-class: 'grid' !default;
 $im-grid-cell-class: 'grid-cell' !default;
 
 /*
+    Use gutters by default
+*/
+$im-gutters-default: false !default;
+
+/*
     Gutter size
 */
 $im-grid-gutter-size: 0 !default;
@@ -29,6 +34,9 @@ $im-grid-include-max-width: false !default;
     list-style: none;
     margin: 0;
     padding: 0;
+
+    @if $im-gutters-default
+    { margin: (-$im-grid-gutter-size) 0 0 (-$im-grid-gutter-size); }
 }
 
 /*
@@ -38,6 +46,11 @@ $im-grid-include-max-width: false !default;
 .#{$im-grid-class}--auto > * {
     flex: 1;
     flex-grow: 4;
+
+    @if $im-gutters-default {
+      box-sizing: border-box;
+      padding: $im-grid-gutter-size 0 0 $im-grid-gutter-size;
+    }
 }
 
 /*
@@ -65,6 +78,18 @@ $im-grid-include-max-width: false !default;
 .#{$im-grid-class}--auto.#{$im-grid-class}--gutters > * {
     padding: $im-grid-gutter-size 0 0 $im-grid-gutter-size;
     box-sizing: border-box;
+}
+
+/*
+    Remove grid gutters
+*/
+.#{$im-grid-class}--no-gutters {
+    margin: 0;
+}
+
+.#{$im-grid-class}--no-gutters > .#{$im-grid-cell-class},
+.#{$im-grid-class}--auto.#{$im-grid-class}--no-gutters > * {
+    padding: 0;
 }
 
 /*
@@ -134,7 +159,6 @@ $im-grid-include-max-width: false !default;
             }
 
             .#{$im-grid-class} > .#{$im-grid-cell-class}.#{$im-grid-cell-class}--#{$n}-#{$i} {
-
                 flex: 0 0 (($n / $i) * 100%) !important;
                 @if $im-grid-include-max-width
                 { max-width: (($n / $i) * 100%) !important; }
@@ -162,14 +186,12 @@ $im-grid-include-max-width: false !default;
                     }
 
                     .#{$im-grid-class}--#{$n}-#{$i}\@#{$breakpoint-name} > .#{$im-grid-cell-class}:not([class*='#{$im-grid-cell-class}--']) {
-
                         flex: 0 0 (($n / $i) * 100%);
                         @if $im-grid-include-max-width
                         { max-width: (($n / $i) * 100%); }
                     }
 
                     .#{$im-grid-class} > .#{$im-grid-cell-class}.#{$im-grid-cell-class}--#{$n}-#{$i}\@#{$breakpoint-name} {
-
                         flex: 0 0 (($n / $i) * 100%) !important;
                         @if $im-grid-include-max-width
                         { max-width: (($n / $i) * 100%) !important; }
