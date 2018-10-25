@@ -23,7 +23,7 @@ $im-grid-include-max-width: false !default;
 @include im-grid-columns(1, 2, 4);
 ```
 
-####Basic Grids:
+#### Basic Grids:
 The grid cells below do not specify any widths, they just naturally space themselves equally and expand to fit the entire row. They’re also equal height by default.
 
 ```html
@@ -42,7 +42,7 @@ The grid cells below do not specify any widths, they just naturally space themse
 </div>
 ```
 
-####Gutters
+#### Gutters
 ```html
 <!-- With gutters -->
 <div class="grid grid--gutters">
@@ -53,7 +53,7 @@ The grid cells below do not specify any widths, they just naturally space themse
 </div>
 ```
 
-####Individual Sizing
+#### Individual Sizing
 When equal widths aren’t what you want, you can add sizing classes to individual cells. Cells without sizing classes simply divide up the remaining space as normal.
 
 ```html
@@ -65,7 +65,7 @@ When equal widths aren’t what you want, you can add sizing classes to individu
 </div>
 ```
 
-####Weight
+#### Weight
 You can change the way the cells size themselves, by modifying `flex-grow` property.
 
 ```html
@@ -84,7 +84,7 @@ You can change the way the cells size themselves, by modifying `flex-grow` prope
 </div>
 ```
 
-####Responsive
+#### Responsive
 Responsive Grids work by adding media classes to the Grid cells or containers. When those media values are met, the grids automatically adjust accordingly.
 
 ```html
@@ -112,7 +112,7 @@ Responsive Grids work by adding media classes to the Grid cells or containers. W
 </div>
 ```
 
-####Auto grids
+#### Auto grids
 You can avoid adding `grid-cell` to children of the grid by using the `grid--auto` class. All children elements will be treated as a `grid-cell`.
 
 ```html
@@ -137,7 +137,7 @@ If you need your grid items to fit a specific number of columns, you can use `gr
 </div>
 ```
 
-####Alignment Features
+#### Alignment Features
 
 ```html
 <!-- Top-aligned Grid Cells -->
@@ -181,7 +181,7 @@ More examples coming soon. See source files for more options.
 - **npm:** Run `npm install include-media-grid`
 - **Bower:** Run `bower install include-media-grid`
 
-##Inspiration
+## Inspiration
 - [philipwalton.github.io/solved-by-flexbox/demos/grids](http://philipwalton.github.io/solved-by-flexbox/demos/grids/)
 - [github.com/eduardoboucas/include-media-columns](https://github.com/e duardoboucas/include-media-columns)
 

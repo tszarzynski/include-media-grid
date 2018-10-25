@@ -94,6 +94,12 @@ $im-grid-include-max-width: false !default;
 .#{$im-grid-class}--justify-center {
     justify-content: center;
 }
+.#{$im-grid-class}--justify-start {
+    justify-content: flex-start;
+}
+.#{$im-grid-class}--justify-end {
+    justify-content: flex-end;
+}
 
 /*
     Alignment per cell
