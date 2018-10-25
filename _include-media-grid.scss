@@ -115,18 +115,21 @@ $im-grid-include-max-width: false !default;
 }
 
 /*
+    Grid fit
+*/
+.#{$im-grid-class}--fit > .#{$im-grid-cell-class} {
+    flex: 1;
+}
+.#{$im-grid-class}--full > .#{$im-grid-cell-class} {
+    flex: 0 0 100%;
+}
+
+/*
     Generate grid classes
 */
 @mixin im-grid-columns($columns...) {
     @each $i in $columns {
         @for $n from 1 through $i {
-            .#{$im-grid-class}--fit > .#{$im-grid-cell-class} {
-                flex: 1;
-            }
-            .#{$im-grid-class}--full > .#{$im-grid-cell-class} {
-                flex: 0 0 100%;
-            }
-
             .#{$im-grid-class}--#{$n}-#{$i} > .#{$im-grid-cell-class}:not([class*='#{$im-grid-cell-class}--']) {
                 flex: 0 0 (($n / $i) * 100%);
                 @if $im-grid-include-max-width
